@@ -1,0 +1,258 @@
+/*----------  Font  ----------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;800&display=swap');
+
+/*
+200;
+400;
+500;
+800;
+*/
+
+/*=============================================
+All                              
+=============================================*/
+* {
+  margin: 0;
+  /* harus dibenerin padding: 0;*/
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--color-kedua);
+  color: var(--color-putih);
+  padding: 0;
+}
+
+:root {
+  --color-hitam: #121212;
+  --color-putih:#F9F6EE;
+  --color-kesatu: #5298d1;
+  --color-kedua: #0A2C47;
+  --color-hover:rgba(82, 152, 209, 0.677);
+  --color-hoverr: rgba(10, 43, 71, 0.692);
+  --font-Header:800;
+  --font-Title:500;
+  --font-SubTitle:400;
+  --font-SubText:200;
+}
+
+/* ==========================================================================
+Navbar
+*/
+li,
+a,
+.btn-home-nav,
+.btn-home {
+  font-family: "poppins", sans-serif;
+  font-weight: var(--font-Title);
+  font-size: 16px;
+  color: var(--color-putih);
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10% 10px 10%;
+}
+
+.navbar {
+  background-color: var(--color-kedua);
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.500);
+}
+
+/* 
+logo
+========================================================================== */
+.logo {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+}
+
+.nav-link {
+  list-style: none;
+}
+
+.nav-link li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_link li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav-link li a:hover {
+  color: var(--color-kesatu);
+}
+/*
+Navbar
+==========================================================================*/
+
+.header-1 {
+  color: var(--color-putih);
+  font-weight: var(--font-Text);
+  margin: 180px 80px 0px 80px;
+}
+
+.header-1 h1 {
+  font-size: 60px;
+  font-weight: var(--font-Header);
+  line-height: 1.2;
+}
+
+.header-1 p {
+  font-size: 18px;
+  font-weight: var(--font-SubTitle);
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.header-1 span {
+  color: var(--color-kesatu);
+}
+
+/*=========
+BUTTOM NAV
+*/
+.btn-home-nav {
+  padding: 2px 15px;
+  border: unset;
+  border-radius: 20px;
+  color: var(--color-putih);
+  z-index: 1;
+  background: var(--color-kesatu);
+  position: relative;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+.btn-home-nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 30px;
+  background-color:var(--color-hover);
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms
+}
+
+.btn-home-nav:hover {
+  background-color: var(--color-hoverr);
+}
+
+.btn-home-nav:hover::before {
+  width: 100%;
+}
+/*
+BUTTOM NAV
+==========*/
+/*=========
+BUTTOM HOME
+*/
+.btn-home {
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  outline: 0;
+  border: 0;
+  padding: 1rem;
+}
+
+.btn-home a {
+  font-weight: var(--font-SubTitle);
+  font-size: 16px;
+  color: var(--color-putih);
+}
+
+.btn-home:before {
+  background-color: var(--color-putih);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  margin-right: 10px;
+  transition: all .42s cubic-bezier(.25, .8, .25, 1);
+  width: 0;
+}
+
+.btn-home:hover:before {
+  background-color: var(--color-putih);
+  width: 3rem;
+}
+/*
+BUTTOM HOME
+==========*/
+
+/*=========
+Background
+*/
+.background1-container {
+  width: 100%;
+  height: 120vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.background1-content {
+  background-image: url(image/bg1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100%;
+  position: relative;
+}
+
+.background1-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-hitamhvr);
+  z-index: -1;
+}
+/* 
+Background
+==========*/
+
+/* 
+Home End 
+========================================================================== */
+/* ========================================================================== 
+Footer Start 
+*/
+
+.copyright-container{
+  font-size: 14px;
+  font-weight: var(--font-SubText);
+  text-align: center;
+  align-items: center;
+  justify-content: center; 
+  padding: 10px 10px 10px 10px;
+  min-height: 60px;
+  width: 100%;
+  color:var(--color-putih);
+  background-color: var(--color-kesatu);
+}
+
+.copyright-container h4 {
+font-size: 16px;
+font-weight: var(--font-SubTitle);
+}
+/* 
+Footer End 
+========================================================================== */
